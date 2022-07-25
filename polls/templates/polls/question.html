@@ -7,10 +7,11 @@
     <p>Hello Guys</p>
     <a href="{% url 'polls:index' %}">Home</a>
     <a href="{% url 'polls:about' %}">About</a>
-    {% for question in questions %}
+    <p>{{ question }}</p>
+
+    {% for choice in choices %}
     <ul>
-        <li>{{ question }}</li>
-        
+        <li>{{ choice }}</li>
 
     </ul>
     {% endfor %}

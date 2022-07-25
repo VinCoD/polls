@@ -6,11 +6,12 @@ from .models import Question, Choice
 def questions(request):
     questions = Question.objects.all()
     context = {'questions': questions}
-    return render(request, 'polls/index.html', context)
+    return render(request, 'polls/questions.html', context)
 
 def question(request, question_id):
     question = Question.objects.get(id=question_id)
-    context = {'question': question}
+    choices = question.choice_set.all()
+    context = {'question': question, 'choices': choices}
     return render(request, 'polls/question.html', context)
 
 def about(request):

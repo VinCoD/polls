@@ -9,8 +9,8 @@
     <a href="{% url 'polls:about' %}">About</a>
     {% for question in questions %}
     <ul>
-        <li>{{ question }}</li>
         
+        <li><a href="{% url 'polls:question' question.id %}">{{ question }}</a></li>
 
     </ul>
     {% endfor %}
