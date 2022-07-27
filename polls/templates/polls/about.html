@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-
-</head>
-
-<body>
+{% extends 'base.html' %}
+{% block content %}
     <a href="{% url 'polls:index' %}">Home</a>
     <p>I'm Vincent, That's what you need to know</p>
-</body>
-</html>
+{% endblock content %}

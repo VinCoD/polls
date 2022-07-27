@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-
-</head>
-<body>
-    <p>Hello Guys</p>
-    <a href="{% url 'polls:index' %}">Home</a>
-    <a href="{% url 'polls:about' %}">About</a>
+{% extends 'base.html' %}
+{% block content %}
     <p>{{ question }}</p>
 
     {% for choice in choices %}
@@ -15,5 +8,5 @@
 
     </ul>
     {% endfor %}
-</body>
-</html>
+
+{% endblock content %}
