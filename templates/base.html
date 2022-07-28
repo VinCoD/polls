@@ -2,19 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Polls</title>
-    
     
 </head>
 <body>
-    <p>Hello Guys</p>
-    <a href="{% url 'polls:index' %}">Home</a>
-    <a href="{% url 'polls:about' %}">About</a>
-   {% block content %}
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
 
-   {% endblock content %}
+    {% bootstrap_javascript %}
+
+    {% bootstrap_messages %}
     
+    <div id="content" name="content" class="main">
+        <div><p>Hello Guys</p>
+            <a href="{% url 'polls:index' %}" class="text-decoration-none">Home</a>
+            <a href="{% url 'polls:about' %}" class="text-decoration-none">About</a>
+
+            {% block content %}
+
+            {% endblock content %}
+        </div>
+        
+
+    </div>
+       
 </body>
 </html>

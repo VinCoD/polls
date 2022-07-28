@@ -4,7 +4,7 @@
     {% for question in questions %}
     <ul>
         
-        <li><a href="{% url 'polls:question' question.id %}">{{ question }}</a></li>
+        <li><a href="{% url 'polls:question' question.id %}" class="text-decoration-none">{{ question }}</a></li>
 
     </ul>
     {% endfor %}
