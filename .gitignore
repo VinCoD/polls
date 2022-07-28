@@ -1,5 +1,4 @@
 venv
 db.sqlite3
-local_settings.py
 polls/__pycache__/
 pollster/__pycache__/
