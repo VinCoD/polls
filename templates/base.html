@@ -14,16 +14,26 @@
     {% bootstrap_javascript %}
 
     {% bootstrap_messages %}
+    {% load bootstrap_icons %}
     
-    <div id="content" name="content" class="main">
-        <div><p>Hello Guys</p>
-            <a href="{% url 'polls:index' %}" class="text-decoration-none">Home</a>
-            <a href="{% url 'polls:about' %}" class="text-decoration-none">About</a>
+    <div class="container">
+        <nav class="navbar navbar-expand-sm bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Poll App</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <a href="{% url 'polls:index' %}" class="nav-link">Home</a>
+                        <a href="{% url 'polls:about' %}" class="nav-link">About</a>
 
-            {% block content %}
+                    </ul>
+            </div>
+        </nav>
+                {% block content %}
 
-            {% endblock content %}
-        </div>
+                {% endblock content %}
         
 
     </div>
