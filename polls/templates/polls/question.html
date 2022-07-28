@@ -4,16 +4,20 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                {{ question }}
+                Question: {{ question }}
             </button>
           </h2>
           {% for choice in choices %}
           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>{{ choice.vote }}</strong> 
-              <ul>
-                <li>{{ choice }}</li>
-              </ul>
+              <div class="card" style="width: 100%;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{ choice }}</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ex officiis ducimus esse non at.</p>
+                  <a href="#" class="btn btn-primary">Vote: {{ choice.votes }}</a>
+                </div>
+              </div>
             </div>
           </div>
           {% endfor %}
