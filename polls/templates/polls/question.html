@@ -16,6 +16,7 @@
                   <h5 class="card-title">{{ choice }}</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ex officiis ducimus esse non at.</p>
                   <a href="#" class="btn btn-primary">Vote: {{ choice.votes }}</a>
+                  <a href="{% url 'polls:vote' question.id %}" class="btn btn-primary">Vote</a>
                 </div>
               </div>
             </div>

@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Question, Choice
+from .forms import ChoiceForm
 
 # Create your views here.
 
@@ -16,3 +17,18 @@ def question(request, question_id):
 
 def about(request):
     return render(request, 'polls/about.html')
+
+def vote(request, question_id):
+    question = Question.objects.get(id=question_id)
+    if request.method != 'POST':
+        form = ChoiceForm()
+    
+    else:
+        form = ChoiceForm(data=request.POST)
+
+        if form.is_valid():
+            form.save
+            return redirect('pollster:vote')
+    
+    context = {'form': form, 'question': question}
+    return render(request, 'polls/vote.html', context)
