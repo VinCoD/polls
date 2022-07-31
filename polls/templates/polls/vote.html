@@ -4,7 +4,7 @@
 
 <form action="{% url 'polls:vote' question.id%}" method="post">
     {% csrf_token %}
-    {{ bootstrap_form form }}
+    {{ form.as_p }}
     <button type="submit">Vote</button>
 
 </form>
