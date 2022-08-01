@@ -4,7 +4,9 @@
 <form action="{% url 'users:register' %}" method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Register</button>
+    
+    <button type="submit">Sign up</button>
+    
     <input type="hidden" name="{% url 'polls:index' %}">
 </form>
 {% endblock content %}
