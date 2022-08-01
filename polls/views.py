@@ -28,7 +28,7 @@ def vote(request, question_id):
 
         if form.is_valid():
             form.save()
-            return redirect('polls:vote')
+            return redirect('polls:vote', question_id=question_id)
     
     context = {'form': form, 'question': question}
     return render(request, 'polls/vote.html', context)
