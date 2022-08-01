@@ -27,7 +27,7 @@ def vote(request, question_id):
         form = ChoiceForm(data=request.POST)
 
         if form.is_valid():
-            form.save
+            form.save()
             return redirect('polls:vote')
     
     context = {'form': form, 'question': question}
