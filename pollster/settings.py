@@ -26,6 +26,7 @@ from .local_settings import *
 
 INSTALLED_APPS = [
     'polls',
+    'users',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
