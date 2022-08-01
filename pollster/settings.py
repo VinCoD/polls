@@ -122,6 +122,7 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+LOGIN_URL = 'users:login'
 
 # Heroku Settings.
 import django_on_heroku

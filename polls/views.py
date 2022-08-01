@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Question, Choice
 from .forms import ChoiceForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -18,6 +19,7 @@ def question(request, question_id):
 def about(request):
     return render(request, 'polls/about.html')
 
+@login_required
 def vote(request, question_id):
     question = Question.objects.get(id=question_id)
     if request.method != 'POST':
