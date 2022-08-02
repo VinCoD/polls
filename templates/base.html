@@ -20,7 +20,7 @@
     
     
     <div class="container">
-        <nav class="navbar navbar-expand-sm bg-light">
+        <nav class="navbar navbar-expand-sm bg-light mb-2">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{% url 'polls:index' %}">Poll App</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,6 +47,7 @@
             
             {% endif %}
         </nav>
+        
                 {% block content %}
 
                 {% endblock content %}
